@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Jonathan Nusantara (jan265), Eric Hall (ewh73), Eric Kahn (edk52)
+# Lab 1, 09-27-2020
+
+# Will run in background
+python video_control.py &
+ # Run in foreground
+sudo SDL_VIDEODRIVER=fbcon SDL_FBDEV=/dev/fb1 mplayer -input file=video_fifo -vo sdl -framedrop bigbuckbunny320p.mp4
